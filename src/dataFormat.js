@@ -1,8 +1,8 @@
 import { fetchData } from "./retrieveData.js";
 
-async function formatData() {
+async function formatData(city) {
     try {
-        const data = await fetchData();
+        const data = await fetchData(city);
         // console.log(data.currentConditions);
         const temp = await data.currentConditions.temp;
         const feelsLike = await data.currentConditions.feelslike;

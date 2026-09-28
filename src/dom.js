@@ -1,13 +1,14 @@
 import { formatData } from "./dataFormat.js";
 
-const container = document.getElementById('container');
 const tempDisplay = document.getElementById('temp');
 const feelsLikeDisplay = document.getElementById('feels-like');
 const conditionsDisplay = document.getElementById('conditions');
+const input = document.getElementById('city-input');
+const displayButton = document.getElementById('display-button');
 
-async function domDisplay() {
+async function domDisplay(city) {
     try {
-        const conditionsData = await formatData();
+        const conditionsData = await formatData(city);
         tempDisplay.innerHTML = await `Temperature: ${conditionsData.temp} &degC`;
         feelsLikeDisplay.innerHTML = await `Feels like: ${conditionsData.feelsLike} &degC`;
         conditionsDisplay.innerHTML = await `Current conditions: ${conditionsData.conditions}`;
@@ -16,5 +17,13 @@ async function domDisplay() {
         console.log(error);
     }
 }
+
+
+displayButton.addEventListener('click', () => {
+    const cityInput = input.value;
+    let array = cityInput.split(' ');
+    let formattedCity = array.join('-').toLowerCase();
+    domDisplay(formattedCity);
+});
 
 export { domDisplay };

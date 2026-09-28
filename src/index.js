@@ -3,4 +3,3 @@ import { formatData } from "./dataFormat.js";
 import { domDisplay } from "./dom.js";
 
 formatData();
-domDisplay();
