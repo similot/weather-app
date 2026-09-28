@@ -11,7 +11,9 @@ export default {
     },
     devtool: 'eval-source-map',
     devServer: {
-        watchFiles: ['./src/index.html']
+        watchFiles: ['./src/index.html'],
+        open: true,
+        port: 3000,
     },
     plugins: [
         new HtmlWebpackPlugin({
