@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/similot/weather-app#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.6.8",
     "webpack": "^5.111.1",
     "webpack-cli": "^7.2.3"
   }
