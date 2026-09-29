@@ -107,3 +107,7 @@ body {
     background-color: var(--clr-secondary);
     transform: rotateY(180deg);
 }
+
+#city-name {
+    text-transform: capitalize;
+}
