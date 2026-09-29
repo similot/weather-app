@@ -1,7 +1,7 @@
 import { formatData } from "./dataFormat.js";
 
 const timeDisplay = document.getElementById('time');
-const tempDisplay = document.getElementById('temp');
+const tempDisplay = document.getElementById('back-temp');
 const feelsLikeDisplay = document.getElementById('feels-like');
 const conditionsDisplay = document.getElementById('conditions');
 const input = document.getElementById('city-input');
