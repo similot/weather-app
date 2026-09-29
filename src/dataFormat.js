@@ -1,8 +1,8 @@
 import { fetchData } from "./retrieveData.js";
 
-async function formatData(city) {
+async function formatData(city, unitSystem) {
     try {
-        const data = await fetchData(city);
+        const data = await fetchData(city, unitSystem);
         console.log(data.currentConditions);
         const time = await data.currentConditions.datetime;
         const temp = await data.currentConditions.temp;
