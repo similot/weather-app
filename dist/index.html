@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
 <script defer src="main.js"></script></head>
+
 <body>
-    
+    <main>
+        <div class="form-container">
+            <input type="text" id="city-input">
+            <button id="display-button">Display conditions</button>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="card-front">
+                    <p id="city-name"></p>
+                    <p id="front-temp"></p>
+                </div>
+                <div class="card-back">
+                    <p id="time"></p>
+                    <p id="back-temp"></p>
+                    <p id="feels-like"></p>
+                    <p id="conditions"></p>
+                </div>
+            </div>
+        </div>
+
+        <button id="unit-toggle">Toggle unit system</button>
+    </main>
 </body>
+
 </html>

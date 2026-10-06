@@ -9,6 +9,7 @@ const conditionsDisplay = document.getElementById('conditions');
 const input = document.getElementById('city-input');
 const displayButton = document.getElementById('display-button');
 const unitToggle = document.getElementById('unit-toggle');
+const flipCard = document.querySelector('.flip-card');
 
 let unitSystem = 'metric';
 
@@ -53,5 +54,7 @@ unitToggle.addEventListener('click', () => {
     let unit = toggleUnitSytem();
     displayCity(unit);
 })
+
+flipCard.addEventListener('click', () => flipCard.classList.toggle('flip-card-clicked'));
 
 export { domDisplay };
